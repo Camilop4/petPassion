@@ -1,0 +1,38 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #666;
+    border-top: 1px solid #ddd;
+    position: fixed; /* Si quieres que el footer esté siempre en la parte inferior */
+    bottom: 0;
+    width: 100%;
+}
+  
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+  
+/* Puedes agregar estilos para enlaces en el footer si los tienes */
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+footer a:hover {
+    color: #0056b3;
+}
+  
+/* Si no quieres que el footer esté fijo en la parte inferior,
+     elimina o comenta las propiedades 'position' y 'bottom'. */
+/*
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+*/
