@@ -5,7 +5,7 @@ const { Producto } = require("../db");
 const router = Router();
 
 
-router.get( ('/', async (req, res) =>{
+router.get('/', async (req, res) =>{
     console.log('ruta de productos');
     try {
         const productos = await Producto.findAll();
@@ -13,7 +13,7 @@ router.get( ('/', async (req, res) =>{
     } catch (error) {
         res.status(400).send( {error: error.message })
     }
-}));
+});
 
 router.get("/:nombre", async (req, res) => {
     console.log("busqueda por nombre success");
