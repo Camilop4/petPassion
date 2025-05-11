@@ -1,5 +1,5 @@
 nav {
-    background-color: #333;
+    background-color: #9C7AFF;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -16,7 +16,7 @@ nav a {
 }
   
 nav a:hover {
-    color: #007bff;
+    color: #E8DDFF;
 }
   
 /* Estilos para la marca o logo (si tienes uno) */
