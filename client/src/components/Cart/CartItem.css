@@ -1,0 +1,97 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+  
+.cart-item:last-child {
+    border-bottom: none;
+}
+  
+.item-image {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+  
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.placeholder-image {
+    background-color: #f0f0f0;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+  
+.item-details {
+    flex-grow: 1;
+}
+  
+.item-name {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+  
+.item-price {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+  
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+  
+.item-quantity button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+  
+.item-quantity button:hover {
+    background-color: #f0f0f0;
+}
+  
+.quantity-value {
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+  
+.item-total {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-left: 20px;
+}
+  
+.remove-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+  
+.remove-button:hover {
+    background-color: #c82333;
+}

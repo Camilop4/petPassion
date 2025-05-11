@@ -1,0 +1,31 @@
+.image-gallery {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal si hay muchas imágenes */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 10px 0;
+}
+  
+.image-gallery img {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+  
+/* O si prefieres una galería en forma de grid */
+/*
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+  
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    object-fit: cover;
+}
+*/
