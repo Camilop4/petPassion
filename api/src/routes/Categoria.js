@@ -45,6 +45,17 @@ router.get("/:categoria", async (req, res) => {
     }
 });
 
+router.post("/create", async (req, res) => {
+    console.log("Insertar una categoría");
+    try {
+        const { nombre, imagen } = req.body;
+        const newCategoria = await Categoria.create({ nombre, imagen });
+        res.status(201).send(newCategoria);
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+});
+
 router.post("/bulk", (req, res) => {
     console.log('Agragar todas las categorias success');
     try {
