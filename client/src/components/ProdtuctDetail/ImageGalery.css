@@ -1,19 +1,19 @@
-.image-gallery {
+/*  .image-gallery {
     display: flex;
-    overflow-x: auto; /* Permite el desplazamiento horizontal si hay muchas imágenes */
-    gap: 10px; /* Espacio entre las imágenes */
+    overflow-x: auto; Permite el desplazamiento horizontal si hay muchas imágenes
+    gap: 10px; Espacio entre las imágenes
     padding: 10px 0;
-}
+    }
   
-.image-gallery img {
-    width: 150px; /* Ajusta el tamaño de las imágenes */
+    .image-gallery img {
+    width: 150px; Ajusta el tamaño de las imágenes 
     height: auto;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-  
-/* O si prefieres una galería en forma de grid */
-/*
+    }
+     
+ O si prefieres una galería en forma de grid 
+
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -29,3 +29,19 @@
     object-fit: cover;
 }
 */
+
+.image-gallery {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente las imágenes (si hubiera varias) */
+  align-items: center; /* Centra verticalmente las imágenes (si el contenedor tiene altura) */
+  /* Puedes ajustar el ancho máximo del contenedor si es necesario */
+  max-width: 500px; 
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.image-gallery img {
+  max-width: 80%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Elimina el espacio extra debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}

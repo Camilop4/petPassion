@@ -1,6 +1,7 @@
 /*import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import api from '../../services/api'; // Importa tu cliente de API
+import "./ProductList.css";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -37,6 +38,7 @@ function ProductList() {
 import React from 'react';
 import ProductCard from './ProductCard';
 import useFetch from '../../hooks/useFetch'; // Importa el hook
+import "./ProductList.css";
 
 function ProductList() {
   const { data, loading, error } = useFetch('/producto'); // Usa el hook
@@ -45,6 +47,7 @@ function ProductList() {
   if (error) return <p>Error al cargar los productos: {error}</p>;
 
   const products = data ? data.productos : []; // Asegúrate de acceder a los datos correctamente
+  console.log("Datos de productos:", products); // <--- Agrega este console.log
 
   return (
     <div className="product-list">
