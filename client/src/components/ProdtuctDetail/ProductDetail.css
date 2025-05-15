@@ -1,21 +1,42 @@
 .product-detail-container {
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
-  gap: 20px;
-  max-width: 960px;
-  margin: 0 auto;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 20px;
+  position: relative; /* Necesario para posicionar el botón absolutamente dentro */
 }
 
-.product-detail-container .image-gallery {
-  flex: 1;
-  min-width: 300px;
+.volver-button {
+  position: absolute;
+  bottom: 0px;
+  left: 0px; /* O right: 20px; para la esquina derecha */
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
-.product-detail-container .product-info {
-  flex: 1;
+.volver-button:hover {
+  background-color: #e9ecef;
+}
+
+.image-gallery {
+  /* Tus estilos para la galería de imágenes */
+  margin-top: 60px; /* Añade espacio para que el botón no se superponga */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ... otros estilos ... */
+}
+
+.product-info {
+  /* Tus estilos para la información del producto */
+  margin-top: 20px;
+  text-align: center;
+  /* ... otros estilos ... */
 }
 
 /* Media query para hacerlo responsivo */

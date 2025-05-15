@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import companyLogo from '../../Assets/logo.svg';
+import companyLogo from '../../image/logo.svg';
 import './HeroSection.css'; // Importa estilos específicos si los tienes
 
 function HeroSection() {

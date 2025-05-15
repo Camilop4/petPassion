@@ -2,6 +2,10 @@
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  justify-content: space-between;
 }
 
 .cart-page h1 {
@@ -10,9 +14,42 @@
   color: #333;
 }
 
-.checkout-button-container {
-  text-align: right;
-  margin-top: 20px;
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-actions-bottom {
+  display: flex;
+  flex-direction: column; /* Apila los botones verticalmente */
+  align-items: flex-end; /* Alinea los elementos a la derecha */
+  gap: 10px; /* Espacio entre los elementos apilados */
+}
+
+.clear-cart-button {
+  padding: 10px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.clear-cart-button:hover {
+  background-color: #d32f2f;
+}
+
+.checkout-area {
+  display: flex; /* Alinea Total e Ir a la Caja en la misma línea */
+  align-items: center; /* Alinea verticalmente */
+  gap: 20px; /* Espacio entre Total e Ir a la Caja */
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .checkout-button {
@@ -23,6 +60,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 

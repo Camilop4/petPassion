@@ -1,0 +1,10 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las cartas pasen a la siguiente línea */
+  justify-content: flex-start; /* Alinea las cartas al inicio */
+  /* O puedes usar justify-content: space-around; o justify-content: space-between; para distribuir el espacio */
+  padding: 20px; /* O el padding que desees */
+}
+
+/* No necesitas estilos específicos para los items individuales aquí,
+   ya que esos están en ProductCard.css */
