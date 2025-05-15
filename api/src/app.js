@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -21,6 +22,19 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
+
+// Configura CORS
+const corsOptions = {
+  origin: [
+    'http://localhost:3000', // Permite peticiones desde tu entorno de desarrollo
+    'TU_URL_DEL_FRONTEND_EN_VERCEL', // Reemplaza con la URL de tu frontend desplegado en Vercel (e.g., tu-proyecto.vercel.app)
+  ],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Si necesitas manejar cookies en las peticiones cross-origin
+  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+};
+
+server.use(cors(corsOptions)); // Aplica el middleware CORS con las opciones configuradas
 
 server.use('/', routes);
 
