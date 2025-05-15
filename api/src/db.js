@@ -7,6 +7,7 @@ const path = require('path');
 } = process.env;*/
 const { DATABASE_URL } = process.env;
 
+console.log("DATABASE_URL en Render:", DATABASE_URL);
 
 /*const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/petpassion`, {
   logging: false, // set to console.log to see the raw SQL queries
