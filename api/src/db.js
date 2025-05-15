@@ -2,13 +2,27 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-const {
+/*const {
   DB_USER, DB_PASSWORD, DB_HOST, DB_PORT,
-} = process.env;
+} = process.env;*/
+const { DATABASE_URL } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/petpassion`, {
+
+/*const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/petpassion`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+});*/
+
+const sequelize = new Sequelize(DATABASE_URL, {
+  dialect: 'postgres',
+  logging: false, // set to console.log to see the raw SQL queries
+  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  dialectOptions: {
+    ssl: {
+      require: true, // Consider enabling if Render enforces SSL
+      rejectUnauthorized: false, // May be needed depending on Render's SSL setup
+    },
+  },
 });
 
 
