@@ -24,17 +24,19 @@ server.use(morgan('dev'));
 });*/
 
 // Configura CORS
-const corsOptions = {
-  origin: [
-    'http://localhost:3000', // Permite peticiones desde tu entorno de desarrollo
-    'https://pet-passion.vercel.app', // Reemplaza con la URL de tu frontend desplegado en Vercel (e.g., tu-proyecto.vercel.app)
-  ],
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // Si necesitas manejar cookies en las peticiones cross-origin
-  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
-};
+server.use((req, res, next) => {
+  const allowedOrigins = ['http://localhost:3000', 'https://pet-passion.vercel.app']; // Lista de orígenes permitidos
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  next();
+});
 
-server.use(cors(corsOptions)); // Aplica el middleware CORS con las opciones configuradas
+//server.use(cors(corsOptions)); // Aplica el middleware CORS con las opciones configuradas
 
 server.use('/', routes);
 
